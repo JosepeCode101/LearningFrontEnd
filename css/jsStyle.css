@@ -1,0 +1,14 @@
+html {
+	background-color: #B8860B;
+}
+.contenedor{
+	border: 10px solid 	#00008B;
+	width: 1200px;
+	height: 600px;
+	border-radius: 15px;
+}
+.contenedor article {
+	border: 2.5px solid #00008B;
+	width: 25%;
+
+}

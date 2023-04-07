@@ -1,0 +1,102 @@
+*{
+	font-family: arial;
+}
+html{
+	background-color: #022F7C;
+}
+body {
+	margin: 0px;
+	margin-top: 0px;
+}
+.contenedor{
+	margin: none;
+}
+.cabesa {
+	padding: none;
+	height: 60px;
+	width: auto;
+	background-color: #022F7C;
+	border-bottom: 6px solid black;
+	padding-left: 10px;
+	margin: 0px; 
+}
+.cabesa h4 {
+	font-family: serif;
+	color: white;
+}
+
+nav {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-image: url('../img/fondo.jpg');
+	width: 100%;
+	padding: 10px;
+}
+#icon {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+#tag{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#tag a {
+	text-decoration: none;
+}
+.nav a:hover {
+	text-decoration-color: orange;
+	color: orange;
+}
+.who {
+	background-color: #FEF1E0;
+	border-bottom: 6px solid black;
+}
+.who div {
+	text-align: center;
+}
+.who h3 {
+	margin: 0px;
+}
+.who article {
+	position: relative;
+	width: 240px;
+	height: auto;
+	box-shadow: 2px 2px 2px 2px;
+	background-color: white;
+	margin: 60px;
+	display: inline-block;
+	border-radius: 15px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#pincha{
+	position: absolute;
+	z-index: 1;
+	top:-8%;
+	left: 90%;
+	width: 40px;
+	height: 45px;
+}
+#rotate1, #rotate3 {
+	transform: rotate(-2deg);
+}
+#rotate2{
+	transform: rotate(2deg);
+}
+.pie {
+
+}
+.pie h3 {
+	margin: 0px;
+	margin-bottom: 10px;
+	color: white;
+}

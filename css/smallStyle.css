@@ -1,0 +1,38 @@
+nav {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+}
+#icon {
+	display: flex;
+	flex-direction: column;
+	width: 50px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+#icon img {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#tag {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	
+	
+}
+#tag a {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.who article {
+	width: 55%;
+	margin-bottom: 30px
+}
+.who article img {
+	width: 90%;
+}
+#pincha {
+	opacity: 0;
+}

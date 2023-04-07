@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>javascript</title>	
+<style type="text/css">	
+	* {
+		font-family: arial;
+	}
+	body {
+		margin:0px;
+		background-color:#C6B54C;
+	}
+	.contenedor {
+		margin: 20px auto;
+		width: 1200px;
+		border: 10px solid #022F7C;
+		border-radius:55px;
+		padding:20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	article {
+		border:2px solid blue;
+		border-radius:15px;
+		height: 300px;
+		width: 45%;
+		margin: 5px auto;
+		padding:10px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+	}
+	table, td {border: 1px solid blue}
+	label {width:100px; display: inline-block;	vertical-align: top}
+	#a4 div {text-align: left;}
+</style>
+<script type="text/javascript" src='../js/jquery-3.3.1.min.js'></script>
+<script type="text/javascript">
+	$(inicio)
+
+	function inicio() {
+		$('#multiplicar').on('click', tabla);
+		$('#cambiocolor').on('click', floyd);
+		$('#validar').on('click', enviar);
+		$('#a3 img').on('click', rotar);
+	}
+
+	function enviar() {
+		var t = $('#texto').val();
+		var n = $('#numero').val();
+		var num = []
+		var prt = []
+
+		if (t.trim()=='' || isNaN(n)){
+			$('#texto').css('background-color','yellow')
+		}
+		else 
+		{
+			$('#texto').css('background-color','white')
+		}
+		if(n.trim()=='' || isNaN(n)){
+			$('#numero').css('background-color','yellow')
+		}
+		else {
+			$('#numero').css('background-color','white')
+		}
+
+		$.each($("input[name='check']:checked"), function(){
+			num.push($(this).val())
+		})
+		prt.push(t);
+		prt.push(n)
+		prt.push(num)
+		//alert(num.join("/"))
+		$('#datos').val(prt.join(' / '))
+
+	}
+
+	function tabla() {
+		$('#resultado').html('');
+		var d = $('#denominador').val();
+		var res;
+		for (i=1;i<=10;i++) {
+			res = d * i;
+			$('#resultado').append('<tr><td>'+d+' X '+i+' = '+res+'</td></td>');
+
+		}
+	}
+
+	function floyd () {
+		var code = $('#color').val();
+		$('#a2').css('background-color', code);
+	}
+
+	function rotar () {
+		$(this).css({'transition':'transform 10s', 'transform':'rotate(3600deg)'})
+	}
+
+
+	
+</script>
+</head>
+<body>
+	<div class='contenedor'>
+		<article id='a1'>
+			<div>
+				<h2>Tabla multiplicar</h2>
+				<input type='number' id='denominador'>
+				<input type='button' id='multiplicar' value='calcular'>
+			</div>
+			<table id='resultado'></table>
+		</article>
+		<article id='a2'>
+			<div>
+				<h2>Cambio color fondo</h2>
+				<input type='color' id='color'>
+				<input type='button' id='cambiocolor' value='cambiar color'>
+			</div>
+		</article>
+		<article id='a3'>
+			<div>
+				<h2>Girar hélice sobre la que se hace click</h2>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+				<img src='../img/helice.png'>
+			</div>
+		</article>
+		<article id='a4'>
+			<div>
+				<h2>Formularios</h2>
+				<label>texto</label>
+				<input type='text' id='texto' required><br><br>
+				<label>numero</label>
+				<input type='text' id='numero' required><br><br>
+				<label>checks</label>
+				<span>1 </span><input type='checkbox' name='check' value='1'>
+				<span>2 </span><input type='checkbox' name='check' value='2'>
+				<span>3 </span><input type='checkbox' name='check' value='3'>
+				<span>4 </span><input type='checkbox' name='check' value='4'><br><br>
+				<label>datos</label>
+				<textarea id='datos'></textarea><br>
+				<br>
+				<center><input type='button' id='validar' value='validar'></center>
+			</div>
+		</article>
+	</div>
+</body>
+</html>
